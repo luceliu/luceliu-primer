@@ -2,10 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { Box, Flex, Text } from '@primer/components'
 import { Link, animateScroll } from 'react-scroll'
+import { theme } from '../pages/index'
 export default function Nav () {
   return (
     <StickyWrapper>
-      <Box bg="gray.9" py={3} px={5}>
+      <Box bg={theme.colors.bg} py={3} px={5}>
         <Flex alignItems="center" justifyContent="space-between">
           <Flex flex="auto">
             <Flex color="blue.2" alignItems="left">
@@ -14,8 +15,11 @@ export default function Nav () {
                 fontSize="2"
                 fontWeight="bold"
                 lineHeight="condensed"
+                color={theme.colors.white}
               >
+                <Link to="hero" smooth={true} duration={500} offset={-60}>
                 Luce Liu
+                </Link>
               </NoWrapText>
             </Flex>
           </Flex>
@@ -25,6 +29,16 @@ export default function Nav () {
               fontSize="2"
               fontWeight="bold"
               lineHeight="condensed"
+              color={theme.colors.white}
+            >
+              <Link to="hero" smooth={true} duration={500} offset={-60} >Home</Link>
+            </NoWrapText>
+            <NoWrapText
+              mx={3}
+              fontSize="2"
+              fontWeight="bold"
+              lineHeight="condensed"
+              color={theme.colors.white}
             >
               <Link to="about" smooth={true} duration={500} offset={-60} >About</Link>
             </NoWrapText>
@@ -33,8 +47,9 @@ export default function Nav () {
               fontSize="2"
               fontWeight="bold"
               lineHeight="condensed"
+              color={theme.colors.white}
             >
-              <Link to="projects" smooth={true} duration={500} offset={-80} >Projects</Link>
+              <Link to="work" smooth={true} duration={500} offset={-80} >Work</Link>
             </NoWrapText>
           </Flex>
         </Flex>

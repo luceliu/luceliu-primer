@@ -8,7 +8,8 @@ import Grid from '../components/grid'
 export const theme = {
   colors: {
     green: '#6bddbf',
-    white: '#e5e5e5'
+    white: '#e5e5e5',
+    bg: '#0f1916'
   }
 }
 const IndexPage = () => (
@@ -17,7 +18,7 @@ const IndexPage = () => (
       title="Gatsby Primer Starter"
       image="https://gatsby-starter-primer.netlify.com/share.jpg"
     />
-    <Hero pt={[1, 3, 5]} name="about">
+    <Hero pt={[1, 3, 5]} name="hero">
       <Grid
         my={[6, 6, 12]}
         flexDirection={['row', 'row', 'row-reverse']}
@@ -85,7 +86,7 @@ const IndexPage = () => (
     <Divider my={[9, 12]} />
     <Body>
       <Grid>
-        <Grid.Item mt={[3, 2, 2]} mb={5} pb={2} name="projects">
+        <Grid.Item mt={[3, 2, 2]} mb={5} pb={2} name="work">
           <Text fontWeight={500} fontSize={5} color="blue.2" lineHeight={1.25}>
             Featured open-source packages and projects.
           </Text>
