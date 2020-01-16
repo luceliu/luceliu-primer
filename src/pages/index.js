@@ -1,15 +1,16 @@
-import React from "react"
-import styled from "styled-components"
-import { Box, Heading, Text, Link, Flex } from "@primer/components"
-import Octicon, {
-  MarkGithub,
-  Mail,
-} from "@githubprimer/octicons-react"
-import { FaGithub, FaPaperPlane, FaMediumM, FaLinkedinIn } from 'react-icons/fa';
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Grid from "../components/grid"
-
+import React from 'react'
+import styled from 'styled-components'
+import { Box, Heading, Text, Link, Flex } from '@primer/components'
+import { FaGithub, FaPaperPlane, FaMediumM, FaLinkedinIn } from 'react-icons/fa'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Grid from '../components/grid'
+export const theme = {
+  colors: {
+    green: '#6bddbf',
+    white: '#e5e5e5'
+  }
+}
 const IndexPage = () => (
   <Layout>
     <SEO
@@ -19,20 +20,20 @@ const IndexPage = () => (
     <Hero pt={[1, 3, 5]} name="about">
       <Grid
         my={[6, 6, 12]}
-        flexDirection={["row", "row", "row-reverse"]}
+        flexDirection={['row', 'row', 'row-reverse']}
         alignItems="end"
       >
-        <div style={{ maxWidth: "700px", margin: "auto" }}>
+        <div style={{ maxWidth: '700px', margin: 'auto' }}>
           <Flex.Item px={5} width={[1, 1, 1, 1]}>
             <Heading
-              color="blue.4"
+              color={theme.colors.green}
               mb={2}
               fontSize={[24, 36, 48]}
               fontWeight="700"
             >
               Hey, I'm Luce! 👋
             </Heading>
-            <Text as='p' color="blue.2" fontSize={[16, 18, 18]} lineHeight={1.5}>
+            <Text as='p' color={theme.colors.white} fontSize={[16, 18, 18]} lineHeight={1.5}>
               Cognitive Systems major at the University of British Columbia, and developer @ nwPlus. Previously an intern at Nuance Communications and PayPal.
             </Text>
           </Flex.Item>
@@ -40,42 +41,42 @@ const IndexPage = () => (
             px={5}
             my={[4, 3, 0]}
             width={[1, 1, 1, 7 / 12]}
-            style={{ marginTop: "1em" }}
+            style={{ marginTop: '1em' }}
           >
             <Text
-              style={{ color: "#79b8ff", marginTop: "24px" }}
+              style={{ color: theme.colors.green, marginTop: '24px' }}
               fontFamily="mono"
               as="p"
               color="blue.3"
               mt={5}
             >
               <LinkLight
-                fontSize={[0, 2, 4]}
+                fontSize={[2, 2, 4]}
                 href="https://github.com/luceliu"
               >
                 <FaGithub />
-              </LinkLight>{" "}
+              </LinkLight>{' '}
               <LinkLight
-                style={{ marginLeft: "8px" }}
-                fontSize={[0, 2, 4]}
+                style={{ marginLeft: '8px' }}
+                fontSize={[2, 2, 4]}
                 href="https://linkedin.com/in/luceliu"
               >
                 <FaLinkedinIn/>
-              </LinkLight>{" "}
+              </LinkLight>{' '}
               <LinkLight
-                style={{ marginLeft: "8px" }}
-                fontSize={[0, 2, 4]}
+                style={{ marginLeft: '8px' }}
+                fontSize={[2, 2, 4]}
                 href="https://medium.com/@notluce"
               >
                 <FaMediumM/>
-              </LinkLight>{" "}
+              </LinkLight>{' '}
               <LinkLight
-                style={{ marginLeft: "8px" }}
-                fontSize={[0, 2, 4]}
+                style={{ marginLeft: '8px' }}
+                fontSize={[2, 2, 4]}
                 href="mailto:thisisluce@gmail.com"
               >
                 <FaPaperPlane/>
-              </LinkLight>{" "}
+              </LinkLight>{' '}
             </Text>
           </Flex.Item>
         </div>
@@ -99,7 +100,7 @@ const IndexPage = () => (
             </Flex.Item>
             <Flex.Item>
               <LinkLight
-                style={{ marginBottom: "1.45rem" }}
+                style={{ marginBottom: '1.45rem' }}
                 fontSize={2}
                 href="https://github.com/primer/css"
               >
@@ -117,7 +118,7 @@ const IndexPage = () => (
             </Flex.Item>
             <Flex.Item>
               <LinkLight
-                style={{ marginBottom: "1.45rem" }}
+                style={{ marginBottom: '1.45rem' }}
                 fontSize={2}
                 href="https://github.com/facebook/react"
               >
@@ -135,7 +136,7 @@ const IndexPage = () => (
             </Flex.Item>
             <Flex.Item>
               <LinkLight
-                style={{ marginBottom: "1.45rem" }}
+                style={{ marginBottom: '1.45rem' }}
                 fontSize={2}
                 href="https://github.com/gatsbyjs/gatsby"
               >
@@ -186,14 +187,13 @@ const Divider = styled(Box)`
 const LinkLight = styled(Link)`
   font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier,
     monospace;
-  color: #79b8ff;
+  color: ${theme.colors.green};
   font-weight: 500;
   text-decoration: none;
   display: inline-block;
 
   &:hover {
-    text-decoration: underline;
-    text-decoration-color: #79b8ff;
+    color: #3a7e6c;
   }
 `
 
@@ -202,7 +202,7 @@ const LinkDark = styled(Link)`
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
-  display: ${props => props.display || "block"};
+  display: ${props => props.display || 'block'};
 
   &:hover {
     text-decoration: underline;

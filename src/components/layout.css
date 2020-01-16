@@ -5,8 +5,8 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  color: #c8e1ff;
-  background-color: #1b1f23;
+  color: #e5e5e5;
+  background-color: #0f1916;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -52,7 +52,7 @@ a:active,
 a:hover {
   outline-width: 0;
   text-decoration: underline;
-  text-decoration-color: #c8e1ff;
+  text-decoration-color: #e5e5e5;
 }
 abbr[title] {
   border-bottom: none;

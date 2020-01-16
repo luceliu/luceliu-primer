@@ -1,13 +1,13 @@
-import React from "react"
-import styled from "styled-components"
-import { Box, Flex, Text } from "@primer/components"
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-export default function Nav() {
+import React from 'react'
+import styled from 'styled-components'
+import { Box, Flex, Text } from '@primer/components'
+import { Link, animateScroll } from 'react-scroll'
+export default function Nav () {
   return (
     <StickyWrapper>
-    <Box bg="gray.9" py={3} px={5}>
-      <Flex alignItems="center" justifyContent="space-between">
-        <Flex flex="auto">
+      <Box bg="gray.9" py={3} px={5}>
+        <Flex alignItems="center" justifyContent="space-between">
+          <Flex flex="auto">
             <Flex color="blue.2" alignItems="left">
               <NoWrapText
                 mx={3}
@@ -18,8 +18,8 @@ export default function Nav() {
                 Luce Liu
               </NoWrapText>
             </Flex>
-        </Flex>
-        <Flex color="blue.2" alignItems="center">
+          </Flex>
+          <Flex color="blue.2" alignItems="center">
             <NoWrapText
               mx={3}
               fontSize="2"
@@ -36,9 +36,9 @@ export default function Nav() {
             >
               <Link to="projects" smooth={true} duration={500} offset={-80} >Projects</Link>
             </NoWrapText>
+          </Flex>
         </Flex>
-      </Flex>
-    </Box>
+      </Box>
     </StickyWrapper>
   )
 }
