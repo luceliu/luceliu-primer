@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `gatsby-starter-primer`,
-    description: `Open Source Projects from Mona Lisa Octocat, the Github Mascot`,
-    author: `@monatheoctocat`,
+    title: `Luce Liu`,
+    description: `Personal site of Luce Liu`,
+    author: `@luceliu`,
     keywords: `github, open-source, projects`,
     url: `https://gatsby-starter-primer.netlify.com/`,
   },

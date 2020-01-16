@@ -1,48 +1,45 @@
 import React from "react"
 import styled from "styled-components"
 import { Box, Flex, Text } from "@primer/components"
-import Octicon, { MarkGithub } from "@githubprimer/octicons-react"
-
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 export default function Nav() {
   return (
+    <StickyWrapper>
     <Box bg="gray.9" py={3} px={5}>
       <Flex alignItems="center" justifyContent="space-between">
         <Flex flex="auto">
-          <a
-            style={{ color: "inherit" }}
-            href="https://github.com/monatheoctocat"
-          >
-            <Flex color="blue.2" alignItems="center">
-              <Octicon
-                icon={MarkGithub}
-                ariaLabel="Primer home"
-                size="medium"
-              />
+            <Flex color="blue.2" alignItems="left">
               <NoWrapText
                 mx={3}
                 fontSize="2"
                 fontWeight="bold"
                 lineHeight="condensed"
               >
-                Mona Lisa
+                Luce Liu
               </NoWrapText>
             </Flex>
-          </a>
         </Flex>
         <Flex color="blue.2" alignItems="center">
-          <a href="https://myoctocat.com">
             <NoWrapText
               mx={3}
               fontSize="2"
               fontWeight="bold"
               lineHeight="condensed"
             >
-              Mona's site
+              <Link to="about" smooth={true} duration={500} offset={-60} >About</Link>
             </NoWrapText>
-          </a>
+            <NoWrapText
+              mx={3}
+              fontSize="2"
+              fontWeight="bold"
+              lineHeight="condensed"
+            >
+              <Link to="projects" smooth={true} duration={500} offset={-80} >Projects</Link>
+            </NoWrapText>
         </Flex>
       </Flex>
     </Box>
+    </StickyWrapper>
   )
 }
 
@@ -50,4 +47,10 @@ const NoWrapText = styled(Text)`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+`
+
+const StickyWrapper = styled.div`
+position: -webkit-sticky;
+position: sticky;
+top: 0;
 `
